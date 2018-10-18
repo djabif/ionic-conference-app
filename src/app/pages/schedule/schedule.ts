@@ -6,6 +6,8 @@ import { ScheduleFilterPage } from '../schedule-filter/schedule-filter';
 import { ConferenceData } from '../../providers/conference-data';
 import { UserData } from '../../providers/user-data';
 
+// import * as "ical"
+
 @Component({
   selector: 'page-schedule',
   templateUrl: 'schedule.html',
@@ -37,7 +39,20 @@ export class SchedulePage {
   ionViewWillEnter() {
     // this.app.setTitle('Schedule');
     this.updateSchedule();
+    // this.readCalendar();
   }
+
+  // readCalendar(){
+  //   ical.fromURL('http://lanyrd.com/topics/nodejs/nodejs.ics', {}, function(err, data){
+  //     console.log(data);
+  //     for (let k in data){
+  //       if (data.hasOwnProperty(k)){
+  //         let ev = data[k]
+  //         console.log("Conference", ev.summary, 'is in',  ev.location, 'on the', ev.start.getDate() );
+  //       }
+  //     }
+  //   })
+  // }
 
   updateSchedule() {
     // Close any open sliding items when the schedule updates

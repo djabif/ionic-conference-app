@@ -12,7 +12,7 @@ import { SchedulePageRoutingModule } from './schedule-routing.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    SchedulePageRoutingModule
+    SchedulePageRoutingModule,
   ],
   declarations: [
     SchedulePage,
