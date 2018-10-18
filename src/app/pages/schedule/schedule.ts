@@ -6,7 +6,8 @@ import { ScheduleFilterPage } from '../schedule-filter/schedule-filter';
 import { ConferenceData } from '../../providers/conference-data';
 import { UserData } from '../../providers/user-data';
 
-// import * as "ical"
+// var ical = require('ical.js');
+
 
 @Component({
   selector: 'page-schedule',
@@ -39,20 +40,27 @@ export class SchedulePage {
   ionViewWillEnter() {
     // this.app.setTitle('Schedule');
     this.updateSchedule();
-    // this.readCalendar();
+    this.readCalendar();
   }
 
-  // readCalendar(){
-  //   ical.fromURL('http://lanyrd.com/topics/nodejs/nodejs.ics', {}, function(err, data){
-  //     console.log(data);
-  //     for (let k in data){
-  //       if (data.hasOwnProperty(k)){
-  //         let ev = data[k]
-  //         console.log("Conference", ev.summary, 'is in',  ev.location, 'on the', ev.start.getDate() );
-  //       }
-  //     }
-  //   })
-  // }
+  readCalendar() {
+    // debugger;
+//     var url = "http://lanyrd.com/topics/nodejs/nodejs.ics";
+//     // Get the basic data out
+// var jCalData = ical.parse(url);
+// var comp = new ical.Component(jCalData[1]);
+//
+// // Fetch the VEVENT part
+// var vevent = comp.getFirstSubcomponent('vevent');
+// var event = new ical.Event(vevent);
+//
+// console.log(event.summary, event.uid, event.description);
+//
+// // Get start and end dates as local time on current machine
+// console.log(event.startDate.toJSDate(), event.endDate.toJSDate());
+//
+
+  }
 
   updateSchedule() {
     // Close any open sliding items when the schedule updates
